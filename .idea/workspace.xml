@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2130e0ee-0e5d-4d09-b64c-53f740be27b0" name="Default Changelist" comment="" />
+    <list default="true" id="2130e0ee-0e5d-4d09-b64c-53f740be27b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/mws/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/media/shop/images/lamb2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/media/shop/images/lamb3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/media/shop/images/lamb_veneno.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/media/shop/images/lambo4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/media/shop/images/lambo_wuTlNuB.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/media/shop/images/lamborghini.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/media/shop/images/llll.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/media/shop/images/llll_OpLLk4D.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/media/shop/images/wp2746912.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/car1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/car2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/car3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/car4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/fossil.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/lamb2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/lamb3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/lamb_veneno.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/lambo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/lambo2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/lambo4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/lamborghini.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/llll.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/pic1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/pic2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/static/shop/wp2746912.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/templates/shop/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/templates/shop/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/templates/shop/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/templates/shop/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/templates/shop/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/templates/shop/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/templates/shop/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/templates/shop/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/templates/shop/prodView.html" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/templates/shop/prodView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +53,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1iMtVBktHRrKO1EVmOG0tv65h6p" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,6 +66,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="ServiceViewManager">
@@ -56,9 +99,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1601734442339" />
-    <state x="43" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1601979440801">
+    <state x="43" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1602076224359">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="43" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1601979440801" />
+    <state x="43" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1602076224359" />
   </component>
 </project>
