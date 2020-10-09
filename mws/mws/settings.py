@@ -58,7 +58,7 @@ ROOT_URLCONF = 'mws.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['mws/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
