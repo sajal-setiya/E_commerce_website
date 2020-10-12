@@ -39,7 +39,7 @@ class Orders(models.Model):
     zip_code = models.CharField(max_length=111)
 
 
-class Orderupdate(models.Model):
+class OrderUpdate(models.Model):
     update_id = models.AutoField(primary_key=True)
     order_id = models.IntegerField(default="")
     update_desc = models.CharField(max_length=5000)
