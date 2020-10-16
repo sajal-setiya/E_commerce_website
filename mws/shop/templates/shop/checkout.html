@@ -25,6 +25,7 @@
          <h4> Step: 2 - Enter Your Details </h4>
         <form action="/shop/checkout/" method="post">{% csrf_token %}
             <input type="hidden" name="itemsJson" id="itemsJson">
+            <input type="hidden" name="amount" id="amount">
   <div class="form-row">
       <div class="form-group col-md-6">
       <label for="name">Name</label>
@@ -120,6 +121,9 @@ alert('Thanks for ordering with us. Your order ID is {{id}}. Use it to track you
 localStorage.clear();
 document.location = "/shop";
 {% endif %}
+
+$('#amount').val($('#totalPrice').html())
+console.log(totalPrice)
 </script>
 
 

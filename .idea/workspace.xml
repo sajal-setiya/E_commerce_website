@@ -4,10 +4,11 @@
     <list default="true" id="2130e0ee-0e5d-4d09-b64c-53f740be27b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mws/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/mws/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mws/shop/templates/shop/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/templates/shop/basic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mws/shop/templates/shop/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/templates/shop/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mws/shop/templates/shop/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/templates/shop/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mws/shop/templates/shop/tracker.html" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/templates/shop/tracker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/mws/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mws/mws/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/mws/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mws/mws/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/templates/shop/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/templates/shop/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mws/shop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mws/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mws/shop/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,14 +66,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1601734442339">
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1602829684721">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1601734442339" />
-    <state x="43" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1602753117159">
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602829684721" />
+    <state x="43" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1602842972198">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="43" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1602753117159" />
+    <state x="43" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1602842972198" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602568226395">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

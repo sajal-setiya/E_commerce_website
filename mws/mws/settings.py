@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',
+    'paypal.standard.ipn',
 
 ]
 
@@ -125,3 +126,6 @@ STATIC_URL = '/static/'
 #managing Media
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+PAYPAL_RECEIVER_EMAIL = 'exam.practicepaper@gmail.com'
+
+PAYPAL_TEST = True

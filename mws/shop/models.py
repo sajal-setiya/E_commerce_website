@@ -37,6 +37,7 @@ class Orders(models.Model):
     address = models.CharField(max_length=111)
     city = models.CharField(max_length=111)
     zip_code = models.CharField(max_length=111)
+    amount = models.IntegerField(default=0)
 
 
 class OrderUpdate(models.Model):

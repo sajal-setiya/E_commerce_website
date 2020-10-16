@@ -1,8 +1,16 @@
-from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+
 from .models import Product, Contact, Orders, OrderUpdate
 from math import ceil
 import json
+
+
+from django.conf import settings
+from paypal.standard.forms import PayPalPaymentsForm
+from django.shortcuts import render, get_object_or_404, redirect
+
+PAYPAL_RECEIVER_EMAIL = 'exam.practicepaper@gmail.com'
 
 
 def index(request):
@@ -40,7 +48,7 @@ def search(request):
             allProds.append([prod, range(1, nSlides), nSlides])
     params = {'allProds': allProds, "msg": ""}
     if len(allProds) == 0 or len(query)<4:
-        params = {'msg': "Please make sure to enter relevent search "}
+        params = {'msg': "No result found for this search"}
     return render(request, 'shop/search.html', params)
 
 
@@ -98,16 +106,45 @@ def checkout(request):
     if request.method=="POST":
         items_json = request.POST.get('itemsJson', '')
         name = request.POST.get('name', '')
+        amount = request.POST.get('amount', '')
         email = request.POST.get('email', '')
         phone = request.POST.get('phone1', '') + " / " + request.POST.get('phone2', '')
         address = request.POST.get('address1', '') + " " + request.POST.get('address2', '')
         city = request.POST.get('city', '')
         zip_code = request.POST.get('zip_code', '')
-        order = Orders(items_json=items_json, name=name, email=email, phone=phone, address=address, city=city, zip_code=zip_code)
+        order = Orders(items_json=items_json, name=name, email=email, phone=phone, address=address, city=city, zip_code=zip_code, amount=amount)
         order.save()
         update = OrderUpdate(order_id=order.order_id, update_desc="The order has been placed")
         update.save()
         thank = True
         id = order.order_id
-        return render(request, 'shop/checkout.html', {'thank':thank, 'id':id})
+        #return render(request, 'shop/checkout.html', {'thank':thank, 'id':id})
+        request.session['order_id'] = id
+        return redirect('process_payment')
+
     return render(request, 'shop/checkout.html')
+
+
+#paypal payment
+def process_payment(request):
+    order_id = request.session.get('order_id')
+    order = get_object_or_404(Orders, order_id=order_id)
+    amount = request.POST.get('amount', '')
+    host = request.get_host()
+
+    paypal_dict = {
+        'business': settings.PAYPAL_RECEIVER_EMAIL,
+        'amount': amount,
+        'item_name': 'Order {}'.format(order.order_id),
+        'invoice': str(order.order_id),
+        'currency_code': 'INR',
+        'quantity': 'will display',
+    }
+
+    form = PayPalPaymentsForm(initial=paypal_dict)
+    return render(request, 'shop/process_payment.html', {'order': order, 'form': form})
+
+
+@csrf_exempt
+def payment_done(request):
+    return render(request, 'shop/payment_done.html')
