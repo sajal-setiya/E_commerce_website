@@ -114,9 +114,7 @@ def checkout(request):
         order.save()
         update = OrderUpdate(order_id=order.order_id, update_desc="The order has been placed")
         update.save()
-        #thank = True
         id = order.order_id
-        #return render(request, 'shop/checkout.html', {'thank':thank, 'id':id})
         request.session['order_id'] = id
         return redirect('process_payment')
 
@@ -126,6 +124,7 @@ def checkout(request):
 def process_payment(request):
     order_id = request.session.get('order_id')
     order = get_object_or_404(Orders, order_id=order_id)
+
 
     paypal_dict = {
         'business': settings.PAYPAL_RECEIVER_EMAIL,
