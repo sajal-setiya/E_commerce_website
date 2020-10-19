@@ -1,0 +1,21 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %}Make Payment{% endblock %}
+
+{% block body %}
+<center class="my-4">
+<div class="w-25 p-3 mt-3" style="background-color: #343a40;">
+    <div  class="bg-primary text-white" style="background-color: #28a745">
+          <h2> My Website Payment Page </h2><br>
+    </div>
+<div class="p-3mb-2 bg-white text-dark">
+<br>
+        <h4> Pay with PayPal</h4>
+    <p>Click On Buy Now To Make Payment</p><br>
+        {{ form.render }}<br>
+    <script>localStorage.clear();</script>
+
+    </div>
+    </div>
+    </center>
+{% endblock %}
