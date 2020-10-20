@@ -13,11 +13,11 @@
         <h4> Pay with PayPal</h4>
     <p>Click On Buy Now To Make Payment</p><br>
         <br>
+    <button onclick="clearCart()">
                 {{ form.render }}
-
+</button>
     </div>
     </div>
-<!--    <script>localStorage.clear();</script>-->
     </center>
 
 {% endblock %}
@@ -50,6 +50,11 @@
     });
 $('#popcart').popover()
 document.getElementById("popcart").setAttribute('data-content', '<h5> Cart </h5>');
+
+
+function clearCart(){
+localStorage.clear();
+}
 
 </script>
 
