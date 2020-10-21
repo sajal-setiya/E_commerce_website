@@ -158,7 +158,7 @@ function updatePopover(cart)
     for (var item in cart)
     {
         popStr = popStr + "<b>" + i + "</b>. ";
-        popStr = popStr + document.getElementById('name' + item).innerHTML + " Qty : " + cart[item][0] +"<br>"; //we can slice the product name if name is long
+        popStr = popStr + document.getElementById('name' + item).innerHTML + " Qty : " + cart[item][0] +"<br>";
         i = i + 1;
     }
     popStr = popStr + "</div> <a href='/shop/checkout'> <button class='btn btn-primary' id='checkout'>Checkout</button></a> <button class='btn btn-primary' id='clearCart' onclick='clearCart()'>Clear Cart</button>";
@@ -208,6 +208,7 @@ $('.divpr').on("click", "button.minus", function(){
     if (cart['pr' + a][0] == 0){
         document.getElementById('divpr' + a).innerHTML = '<button id="pr'+a+'" class="btn btn-primary cart">Add to Cart</button>';
         delete cart['pr'+a];
+        location.reload(true);
     }
     else{
         document.getElementById('valpr' + a).innerHTML = cart['pr' + a][0];

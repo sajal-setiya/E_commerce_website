@@ -3,6 +3,7 @@
 {% block title %}  {{product.product_name}} {% endblock %}
 
 {% block body %}
+{% load static %}
 
 <div class="container my-4">
     <div class="row">
@@ -11,10 +12,10 @@
                 <img src="/media/{{product.image}}" width="280px" height="320px">
             </div><br>
             <div class="row">
-                <button class="btn btn-primary mx-3">Buy Now</button>
-<!--                <button class="btn btn-primary">Add To Cart</button>-->
 
-                  <button id="bid{{i.id}}" class="bid btn btn-primary cart">Add to Cart</button><br><br>
+                <button class="btn btn-primary buy mx-3">Buy Now</button>
+                <button class="btn btn-primary add" id="pr{{product.id}}">Add To Cart</button>
+
 
             </div>
             
@@ -34,6 +35,35 @@
 {% block js %}
 <script>
 
+<!--    if(localStorage.getItem('cart') == null){-->
+<!--    var cart = {};-->
+<!--    }-->
+<!--    else{-->
+<!--    cart = JSON.parse(localStorage.getItem('cart'));-->
+<!--    document.getElementById('cart').innerHTML = Object.keys(cart).length;-->
+<!--    }-->
+<!--    $('.cart').click(function(){-->
+
+<!--    var idstr = this.id.toString();-->
+<!--    console.log(idstr);-->
+<!--    if (cart[idstr] != undefined){-->
+<!--    cart[idstr] = cart[idstr] + 1;-->
+<!--    }-->
+<!--    else{-->
+<!--    cart[idstr] =  1;-->
+<!--    }-->
+<!--    console.log(cart);-->
+<!--    localStorage.setItem('cart', JSON.stringify(cart));-->
+
+<!--    });-->
+<!--$('#popcart').popover()-->
+
+
+<!-- ///////////////////////////////////////////////////////////////////////  -->
+
+console.log('working');
+
+
     if(localStorage.getItem('cart') == null){
     var cart = {};
     }
@@ -41,51 +71,48 @@
     cart = JSON.parse(localStorage.getItem('cart'));
     document.getElementById('cart').innerHTML = Object.keys(cart).length;
     }
-    $('.cart').click(function(){
+$('.add').click(function(){
+console.log('add button clicked');
 
+var idstr = this.id.toString();
+console.log(idstr);
 
-    var idstr = this.id.toString();
-    console.log(idstr);
-    if (cart[idstr] != undefined){
-    cart[idstr] = cart[idstr] + 1;
-    }
-    else{
-    cart[idstr] =  1;
-    }
-    console.log(cart);
-    localStorage.setItem('cart', JSON.stringify(cart));
+if (cart[idstr] != undefined){
+cart[idstr] = cart[idstr]+1;
+}
+else
+{
 
-    });
-$('#popcart').popover()
-document.getElementById("popcart").setAttribute('data-content', '<h5> Cart </h5>');
+  qty = 1;
+  name = ('{{product.product_name}}');
+  price = ('{{product.price}}');
+  cart[idstr] = [qty, name, parseInt(price)];
+}
+console.log(cart);
+localStorage.setItem('cart', JSON.stringify(cart));
+});
 
+$('.buy').click(function(){
+var idstr = this.id.toString();
+console.log(idstr);
 
+if (cart[idstr] != undefined){
+cart[idstr] = cart[idstr]+1;
+}
+else
+{
 
+  qty = 1;
+  name = ('{{product.product_name}}');
+  price = ('{{product.price}}');
+  cart[idstr] = [qty, name, parseInt(price)];
+}
+console.log(cart);
+localStorage.setItem('cart', JSON.stringify(cart));
 
-<!--ADD to cart-->
+window.location.href = "/shop/checkout/";
 
-
-
- // if the add to cart button is clicked
-
-      $('.bid').on('click', 'button.cart', function()
-    {
-        var idstr = this.id.toString();
-        if (cart[idstr] != undefined)
-        {
-            qty = cart[idstr][0] + 1;
-
-        }
-        else
-        {
-            qty = 1;
-            name = document.getElementById('name' + idstr).innerHTML;
-            price = document.getElementById('price' + idstr).innerHTML;
-            cart[idstr] = [qty, name, parseInt(price)];
-        }
-        updateCart(cart);
-    });
-
+});
 
 
 </script>
